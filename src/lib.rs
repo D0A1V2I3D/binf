@@ -5,7 +5,6 @@ TODO documentation
 #[cfg(test)]
 mod tests;
 
-/// file that holds functions that just transform input to output
 pub mod flag_utils;
 pub mod macros;
 
@@ -81,7 +80,19 @@ impl Flag {
         }
     }
 
-    /// initializes a Flag with 0, use new_flag! macro to create with flags instead
+    /// returns flags
+    pub fn get(&self) -> i32 {
+        let base: i32 = 2;
+        let mut num = 0;
+        for (i, value) in self.fvec.iter().enumerate() {
+            if *value {
+                num += base.pow(i as u32);
+            }
+        }
+        num
+    }
+
+    /// initializes a Flag with 0, use flag_new! macro to create with flags instead
     pub fn new() -> Self {
     Self {
             fvec: vec![],
