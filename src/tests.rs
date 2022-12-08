@@ -44,3 +44,8 @@ fn gettest() {
     let flag = flag_new![3, 7];
     assert_eq!(flag.get(), 136);
 }
+
+#[test]
+fn getallutil() {
+    assert_eq!(vec![3, 7], crate::flag_utils::get_flags(136));
+}
