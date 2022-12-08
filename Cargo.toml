@@ -2,6 +2,12 @@
 name = "binf"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "A crate that adds utilities for dealing with binary flags"
+authors = ["0David <me@davidon.top>"]
+readme = "README.md"
+repository = "https://github.com/D0A1V2I3D/binf"
+documentation = "https://docs.rs/binf/"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
