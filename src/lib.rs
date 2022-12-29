@@ -75,9 +75,7 @@ impl Flag {
             tvec.push((rest % 2) != 0);
             rest = rest / 2;
         }
-        Self {
-            fvec: tvec
-        }
+        Self { fvec: tvec }
     }
 
     /// returns flags
@@ -94,8 +92,6 @@ impl Flag {
 
     /// initializes a Flag with 0, use flag_new! macro to create with flags instead
     pub fn new() -> Self {
-    Self {
-            fvec: vec![],
-        }
+        Self { fvec: vec![] }
     }
 }
